@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../../css/main.css')  
+    link(rel="stylesheet", href="../../css/ie9.css")  
+    link(rel="stylesheet", href="../../css/font-awesome.min.css")  
+
+  body      
+    div#page-wrapper
+      div#header-wrapper
+        div(class='container')
+          div(class='row')
+            div(class='12u')
+              header#header
+                h1
+                  a(href="/") FaceCast
+                nav  
+                  a(href="/ajout") Ajout 
+                  a(href="/offre") Offre
+                  a(href="/candidature") Candidature
+      div#main
+        div(class='container')
+          div(class='row row-main')
+            div(class='4u 12u(mobile)')
+                block content
+             
+
+      footer
+        div(class='container')
+          div(class='row')
+            div(class='12u')
+              div#copyright
+                p FaceCast All Rights reserved
+
+
+
+      
+    script(src='../../js/jquery.min.js')         
+    script(src='../../js/jquery.scrolly.min.js')         
+    script(src='../../js/jquery.scrollzer.min.js')         
+    script(src='../../js/skel.min.js')           
+    script(src='../../js/util.js')         
+    script(src='../../js/main.js')

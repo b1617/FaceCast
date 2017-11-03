@@ -1,0 +1,23 @@
+extends layout
+block content  
+    div.container
+        header 
+            h2 Ajouter une offre
+            br
+            form(action="../ajout/ajouter", method="post")  
+                input(type='text', name="nomEvenement", placeholder='Nom d\'évenement')
+                br
+                input(type='text', name="typeEvenement", placeholder='Type d\'évenement')
+                br
+                input(type='date', name="dateDebut", placeholder='Date') 
+                br  
+                input(type='number', name="nbJours", placeholder='Nombre de jours') 
+                br  
+                input(type='text', name="role", placeholder='Rôle')  
+                br 
+                input(type='number', name="nbFigurant", placeholder='Nombre de figurants')    
+                br  
+                input(type='submit')
+        
+
+        

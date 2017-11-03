@@ -1,0 +1,26 @@
+extends layout
+block content
+    div.container
+        header 
+            h2 Update une offre
+            br
+                
+            form(action="../update/" + offreData._id + "/check", method="post") 
+
+                //- input(type="hidden" name="id" value=offreData._id)
+                input(type='text', name="nomEvenement" , value=offreData.nomEvenement)
+                br
+                input(type='text', name="typeEvenement", value=offreData.typeEvenement)
+                br
+                input(type='date', name="dateDebut",value=offreData.dateDebut) 
+                br  
+                input(type='number', name="nbJours", value=offreData.nbJours)
+                br  
+                input(type='text', name="role", value=offreData.role)  
+                br 
+                input(type='number', name="nbFigurant", value=offreData.nbFigurant)    
+                br  
+                input(type='submit')
+   
+
+        

@@ -1,0 +1,39 @@
+extends layout
+block content
+    div.container
+        header 
+            h2 Liste des candidatures
+        table
+            hr
+            thead
+                th Nom d'évenement
+                th Figurant
+                th Statut
+                    br
+                    br
+            tbody
+                br
+                each candidature , i in candidatureList 
+                    tr  
+                        th
+                            each offre in candidature.offre
+                                = offre.nomEvenement
+                        th
+                            each figurant in candidature.figurant
+                                = figurant.nom + "  " +  figurant.prenom  
+                        th  
+                            form(action="../candidature/update/" + candidature._id, method="post")
+                                select(name="statut" style="right:50px")
+                                    option(value=candidature.statut) 
+                                        = candidature.statut
+                                    each val in ['enAttente','accepté','refusé','retenu','terminé']
+                                        if val != candidature.statut
+                                            option(value=val) 
+                                                =val   
+                                input(type='submit' value="✎" style="left:180px; bottom:38px") 
+                        th
+                            br
+                            br
+                               
+
+                            

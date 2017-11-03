@@ -1,0 +1,25 @@
+{
+	"candidature" : 
+		{
+			"statut" : "enAttente",
+			"idOffre" : "59ede93db8b17d0068cc3e23",
+			"idfigurant" : "59ec6fdf49a17b4da7e07ec5"
+		},
+		{
+			"statut" : "enAttente",
+			"idOffre" : "59ede93db8b17d0068cc3e23",
+			"idfigurant" : "59ec70a849a17b4da7e07f27"
+		},
+		{
+			"statut" : "enAttente",
+			"idOffre" : "59ede95ab8b17d0068cc3e24",
+			"idfigurant" : "59ec70a849a17b4da7e07f27"
+		},
+		{
+			"statut" : "enAttente",
+			"idOffre" : "59ede95ab8b17d0068cc3e24",
+			"idfigurant" : "59edeaba1c2df8fd35db675c"
+		}
+
+	
+}

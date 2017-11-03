@@ -1,0 +1,46 @@
+extends layout
+block content
+    div.container   
+        header 
+            h2 Les offres
+        table
+            hr
+            thead
+                th Nom d'évenement
+                th Type d'évenement
+                th Date
+                th Nombre de jours
+                th Rôle
+                th Nombre de figurants
+                th Supprimer
+                th Update
+                    br
+                    br
+                
+            tbody
+                br
+                each offre , i in offreList 
+                    tr
+                        
+                        th
+                            = offre.nomEvenement
+                        th
+                            = offre.typeEvenement
+                        th
+                            = offre.dateDebut
+                        th 
+                            = offre.nbJours
+                        th 
+                            =offre.role
+                        th
+                            = offre.nbFigurant
+                        th 
+                            a(href="../offre/supprimer/" + offre._id style="text-decoration:none; color:red" ) ✘
+                                
+                        th
+                            a(href="../offre/update/" + offre._id style="text-decoration:none; color:green") ✎
+                            br
+                            br
+                               
+
+                            
