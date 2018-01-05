@@ -2,15 +2,18 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var figurant = Schema({
+  apiKey : String,
   nom: String,
   prenom: String,
   age: Number,
+  email : String,
   sexe: String,
   role: String,
 
 }, { collection: 'figurantCollection' });
 var candidature = Schema({
   statut: String,
+  apiKey : { type: Schema.Types.String, ref: 'Figurant' },
   idOffre: { type: Schema.Types.ObjectId, ref: 'Offre' },
   idFigurant: { type: Schema.Types.ObjectId, ref: 'Figurant' }
 
@@ -19,7 +22,7 @@ var candidature = Schema({
 var offre = Schema({
   nomEvenement: String,
   typeEvenement: String,
-  dateDebut: String,
+  dateDebut: Date,
   nbJours: Number,
   role: String,
   nbFigurant: Number

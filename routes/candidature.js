@@ -16,14 +16,14 @@ router.get('/', function (req, res, next) {
     {
       $lookup: {
         from: "figurantCollection",
-        localField: "idFigurant",
-        foreignField: "_id",
+        localField: "apiKey",
+        foreignField: "apiKey",
         as: "figurant"
       }
     }
   ]).exec(function (err, candidature) {
     if (err) throw err;
-    res.render('candidature', { candidatureList: candidature });
+   res.render('candidature', { candidatureList: candidature });
    // res.json(candidature)
   });
 });
